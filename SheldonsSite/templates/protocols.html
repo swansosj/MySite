@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Protocols</h1>
+    {% for protocol in proto %}
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          <a class="mr-2" href="#">{{ protocol.name }}</a>
+          <small class="text-muted">RFC {{ protocol.rfc }}</small>
+        </div>
+        <h2><a class="article-title" href="#">{{ protocol.acron }}</a></h2>
+        <p class="article-content">{{ protocol.purpose }}</p>
+      </div>
+    </article>
+    {% endfor %}
+{% endblock content%}
