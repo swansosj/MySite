@@ -3,7 +3,7 @@ from flask_login import current_user
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from email_validator import validate_email
-from NetAPI.models import User
+from SheldonsSite.models import User
 
 class RegistrationForm(FlaskForm):
     username = StringField('Username',

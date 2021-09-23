@@ -1,7 +1,7 @@
 from flask import render_template, url_for, flash, redirect, request
-from NetAPI import app, db, bcrypt
-from NetAPI.forms import RegistrationForm, LoginForm, UpdateAccountForm
-from NetAPI.models import User, Post
+from SheldonsSite import app, db, bcrypt
+from SheldonsSite.forms import RegistrationForm, LoginForm, UpdateAccountForm
+from SheldonsSite.models import User, Post
 from flask_login import login_user, current_user, logout_user, login_required
 
 course = [
