@@ -13,6 +13,112 @@ course = [
     }
 ]
 
+sheldon = {
+    'firstName': 'Sheldon',
+    'lastName': 'Swanson',
+    'age': '33'
+}
+
+credentials = [
+    {
+    'name': 'Master of Science',
+    'focus': 'Digitial Forensics',
+    'from': 'University of South Florida'
+    },
+    {
+    'name': 'Bachelor of Science',
+    'focus': 'Computer Networking and Telecomunications',
+    'from': 'Florida State Collge at Jacksonville'
+    },
+    {
+    'name': 'Associate of Arts',
+    'focus': 'General Education',
+    'from': 'Florida State College at Jacksonville'
+    },
+    {
+    'name': 'Master Training Specialist',
+    'focus': 'Adult Learning, Curiculum Development, Public Speaking',
+    'from': 'Naval Education Center for Professional Development'
+    }
+]
+
+certifications = [
+    {
+    'name': 'Fortinet Network Security Expert Level 4',
+    'organization': 'Fortinet',
+    'Status': 'Active',
+    'Expiration Date': ''
+    },
+    {
+    'name': 'Cisco Certified Networking Profesional Enterprise Core',
+    'organization': 'Cisco Systems',
+    'Status': 'Active',
+    'Expiration Date': ''
+    },
+    {
+    'name': 'Security+',
+    'organization': 'CompTIA',
+    'Status': 'Active',
+    'Expiration Date': ''
+    },
+    {
+    'name': 'Network+',
+    'organization': 'CompTIA',
+    'Status': 'Active',
+    'Expiration Date': ''
+    },
+    {
+    'name': 'A+',
+    'organization': 'CompTIA',
+    'Status': 'Active',
+    'Expiration Date': ''
+    }
+]
+
+schools = [
+    {
+    'name': 'University of South Florida',
+    'area': 'Cybersecurity',
+    'focus': 'Digital Forensics'
+    },
+    {
+    'name': 'Florida State College at Jacksonville',
+    'area': 'Information Technology',
+    'focus': 'Computer Networking'
+    },
+    {
+    'name': 'Naval Education Professional Development Center',
+    'area': 'Instructor School',
+    'focus': 'Adult Education, Public Speaking, & Curriculum Development'
+    },
+    {
+    'name': 'Naval Education Center for Security Forces',
+    'area': 'Small Arms Marksmanship Instructor',
+    'focus': ''
+    },
+    {
+    'name': 'Naval Education Center for Security Forces',
+    'area': 'Visit Board Search and Seizure Team Member',
+    'focus': ''
+    },
+    {
+    'name': 'Naval Education AEGIS Training and Readiness Center',
+    'area': 'MK 99 Fire Control System, 400Hz Converter System,\
+    Operational Readiness Test System Techician',
+    'focus': ''
+    },
+    {
+    'name': 'Naval Education Center for Surface Combat Systems',
+    'area': "Firecontrolman 'A' School",
+    'focus': ''
+    },
+    {
+    'name': 'Naval Education Advanced Technology Training',
+    'area': 'Advanced Technical Training',
+    'focus': ''
+    }
+]
+
 proto = [
     {
     'id':0,
@@ -54,6 +160,7 @@ proto = [
 
 
 @app.route('/', methods=['GET'])
+
 @app.route('/home', methods=['GET'])
 def home():
     return render_template('home.html')
@@ -61,8 +168,6 @@ def home():
 @app.route('/protocols')
 def protocols():
     return render_template('protocols.html', title='Protocols', proto=proto)
-
-
 
 @app.route('/about', methods=['GET'])
 def about():
